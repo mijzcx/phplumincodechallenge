@@ -23,11 +23,11 @@ The Lumen framework is open-sourced software licensed under the [MIT license](ht
 ### THE CODING CHALLENGE CODE.
 This part is about setting up a notification rest api.
   Notification Table has fields like 
-    * message_from, 
-    * message_to, 
-    * message, 
-    * message_type, -- 0 for warning, 1 for info and 2 for error.
-    * message_status -- 0 for unread, 1 for read
+  * message_from, 
+  * message_to, 
+  * message, 
+  * message_type, -- 0 for warning, 1 for info and 2 for error.
+  * message_status -- 0 for unread, 1 for read
     
   
 Here are the rest api for:
