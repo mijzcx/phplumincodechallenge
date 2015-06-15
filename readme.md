@@ -21,16 +21,28 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
 
 ### THE CODING CHALLENGE CODE.
-This part is about setting up a notification table to running the restapi phpunit test.
-  Notification Table has fields like message_from, message_to, message, message_type, and message_status.
-  message_type 0 for warning, 1 for info and 2 for error.
-  message_status 0 for unread, 1 for opened.
+This part is about setting up a notification rest api.
+  Notification Table has fields like 
+    * message_from, 
+    * message_to, 
+    * message, 
+    * message_type, -- 0 for warning, 1 for info and 2 for error.
+    * message_status -- 0 for unread, 1 for read
+    
   
-Here are rest api for:
+Here are the rest api for:
   * save notification               POST   /v1/notification
   * retrieve unread notifications   GET    /v1/notification/unread
   * delete notification             DELETE /vi/notification/{id}
 And its respective unit tests.
+
+You can view php code:
+  * routes  /app/Http/routes
+  * NotificationController /app/Http/Controllers
+  * Notification /app/Models
+  * generated eloquent mapping /database/migrations
+  * seeding NotificationTableSeeder
+  * NotificationTest /tests
 
 Here's instruction to run and test the codechallege code. 
 
@@ -46,5 +58,6 @@ Here's instruction to run and test the codechallege code.
 4. php artisan db:seed
 5. phpunit
 
+acknowlegement Ali and Kiran of KyePot's coding challenge.
 
 
