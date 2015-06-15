@@ -1,4 +1,4 @@
-## Lumen PHP Framework
+## Using Lumen PHP Framework for REST API example.
 
 [![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
 [![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
@@ -21,12 +21,12 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
 
 ### THE CODING CHALLENGE CODE.
-This is all about setting up a notification table
-  with fields like message_from, message_to, message, message_type, and message_status.
+This part is about setting up a notification table to running the restapi phpunit test.
+  Notification Table has fields like message_from, message_to, message, message_type, and message_status.
   message_type 0 for warning, 1 for info and 2 for error.
   message_status 0 for unread, 1 for opened.
   
-Here are rest api for
+Here are rest api for:
   * save notification               POST   /v1/notification
   * retrieve unread notifications   GET    /v1/notification/unread
   * delete notification             DELETE /vi/notification/{id}
