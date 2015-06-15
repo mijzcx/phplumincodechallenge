@@ -47,10 +47,10 @@ You can view php code:
 Here's instruction to run and test the codechallege code. 
 
 0. You must have PHP installed, with pdo_mysql setup in php.ini
-  0.1 You must have MySQL installed.
-  0.2 You must have a php composer.
-  0.3 Then run inside codechallenge php artisan serve
-        http://localhost:8000/v1/notification/unread for example
+    * You must have MySQL installed.
+    * You must have a php composer.
+    * Then run inside codechallenge php artisan serve
+    * for example: http://localhost:8000/v1/notification/unread 
   
 1. Set the .env for the database, username and password, then apply this command to the console.
 2. php artisan migrate:refresh
@@ -58,6 +58,8 @@ Here's instruction to run and test the codechallege code.
 4. php artisan db:seed
 5. phpunit
 
-acknowlegement Ali and Kiran of KyePot's coding challenge.
+-- no cors, no session_token and authentication yet.
+
+acknowlegement to Ali and Kiran of KyePot's coding challenge.
 
 
