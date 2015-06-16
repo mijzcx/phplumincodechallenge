@@ -46,7 +46,8 @@ You can view php code:
   * Notification /app/Models
   * generated eloquent mapping /database/migrations
   * seeding NotificationTableSeeder
-  * NotificationTest /tests
+  * No
+  tificationTest /tests
 
 Here's instruction to run and test the codechallege code. 
 
@@ -58,6 +59,7 @@ Here's instruction to run and test the codechallege code.
     * database.php - located at /config/
   
 1. Set the .env for the database, username and password, then apply this command to the console.
+    * or you can comment in the boostrap/app.php the Dotenv::load(__DIR__.'/../'); to use database.php setup.
 2. php artisan migrate:refresh
 3. php artisan migrate
 4. php artisan db:seed
