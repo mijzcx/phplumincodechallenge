@@ -1,7 +1,7 @@
 <?php
 
 
-$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$url = parse_url(getenv("DATABASE_URL"));
 
 $host = $url["host"];
 $username = $url["user"];
@@ -35,7 +35,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -55,16 +55,15 @@ return [
 
     'connections' => [
 
-        'mysql' => [
-            'driver'    => 'mysql',
+        'pgsql' => [
+            'driver'    => 'pgsql',
             'host'      => env('DB_HOST', $host),
             'database'  => env('DB_DATABASE', $database),
             'username'  => env('DB_USERNAME', $username),
             'password'  => env('DB_PASSWORD', $password),
             'charset'   => 'utf8',
-            'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
-            'strict'    => false,
+            'schema'    => 'public',
         ],
 
     ],
