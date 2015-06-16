@@ -32,7 +32,7 @@ This part is about setting up a notification rest api.
   
 Here are the rest api for:
   * save notification               POST   /v1/notification
-  * retrieve unread notifications   GET    /v1/notification/unread
+  * retrieve unread notifications   GET    /v1/notifications/unread
   * delete notification             DELETE /vi/notification/{id}
 And its respective unit tests.
 
@@ -46,17 +46,34 @@ You can view php code:
 
 Here's instruction to run and test the codechallege code. 
 
-0. You must have PHP installed, with pdo_mysql setup in php.ini
-    * You must have MySQL installed.
+0. You must have PHP installed, with pdo_mysql or pdo_pgsql setup in php.ini
+    * You must have MySQL/POSTGRESql installed.
     * You must have a php composer.
     * Then run inside codechallenge php artisan serve
-    * for example: http://localhost:8000/v1/notification/unread 
+    * for example: http://localhost:8000/v1/notifications/unread 
+    * database.php - located at /config/
   
 1. Set the .env for the database, username and password, then apply this command to the console.
 2. php artisan migrate:refresh
 3. php artisan migrate
 4. php artisan db:seed
 5. phpunit
+
+For heroku setup.
+heruko login
+heruko create
+heroku addons:create heroku-postgresql:hobby-dev   // for free. Just change database.php just incase.
+
+git push heroku master
+heroku ps:scale web=1
+
+heroku run php artisan migrate
+heroku run php db:seed
+
+heroku open
+
+here's my heroku example: http://mijzcx-codechallenge-php.herokuapp.com/v1/notifications/unread
+
 
 -- no cors, no session_token and authentication yet.
 

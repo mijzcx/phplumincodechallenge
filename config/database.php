@@ -3,10 +3,11 @@
 
 $url = parse_url(getenv("DATABASE_URL"));
 
-$host = $url["host"];
-$username = $url["user"];
-$password = $url["pass"];
-$database = substr($url["path"], 1);
+$host = 'localhost'; // $url["host"];
+$username = 'postgres'; // $url["user"];
+$password = 'password'; // $url["pass"];
+$database = 'test_db'; // substr($url["path"], 1);
+
 
     
 return [
@@ -54,7 +55,18 @@ return [
     */
 
     'connections' => [
-
+        
+        'mysql' => [
+            'driver'    => 'mysql',
+            'host'      => env('DB_HOST', $host),
+            'database'  => env('DB_DATABASE', $database),
+            'username'  => env('DB_USERNAME', $username),
+            'password'  => env('DB_PASSWORD', $password),
+            'charset'   => 'utf8',
+            'prefix'    => '',
+            
+        ],
+        
         'pgsql' => [
             'driver'    => 'pgsql',
             'host'      => env('DB_HOST', $host),

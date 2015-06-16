@@ -21,6 +21,6 @@ $app->get('/', function() use ($app) {
 
 
 $app->get(    '/v1/notification',             'App\Http\Controllers\NotificationController@index');
-$app->get(    '/v1/notification/unread',      'App\Http\Controllers\NotificationController@retriveUnreadNotifications');
+$app->get(    '/v1/notifications/unread',      'App\Http\Controllers\NotificationController@retriveUnreadNotifications');
 $app->delete( '/v1/notification/{id}',        'App\Http\Controllers\NotificationController@deleteNotification');
 $app->post(   '/v1/notification',             'App\Http\Controllers\NotificationController@saveNotification');
