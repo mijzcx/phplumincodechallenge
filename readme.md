@@ -32,8 +32,12 @@ This part is about setting up a notification rest api.
   
 Here are the rest api for:
   * save notification               POST   /v1/notification
+  * $ curl -H 'Content-Type: application/json' --data '{"message_from":"from1", "message_to": "to1", "message":"tiny message", "message_type":"0", "message_status":"0"}' -X POST {baseurl}/v1/notification
   * retrieve unread notifications   GET    /v1/notifications/unread
+  * $ curl -H 'Content-Type: application/json' -X GET {baseurl}/v1/notifications/unread
   * delete notification             DELETE /vi/notification/{id}
+  * $ curl -H 'Content-Type: application/json' -X DELETE {baseurl}/v1/notification/{id}
+
 And its respective unit tests.
 
 You can view php code:
@@ -71,6 +75,7 @@ Here's instruction to run and test the codechallege code.
 7. heroku run php db:seed
 8. heroku open
 9. here's my heroku example: http://mijzcx-codechallenge-php.herokuapp.com/v1/notifications/unread
+
 
 
 -- no cors, no session_token and authentication yet.
