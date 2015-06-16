@@ -14,4 +14,10 @@ class User extends Model {
     ];
     
     protected $hidden = ['password'];
+    
+    public function setPasswordAttribute($value) {
+        $salt = 'salty salt';
+        $this->attributes['password'] = md5($salt.$value);
+    }
+    
 }
