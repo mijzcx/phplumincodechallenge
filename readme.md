@@ -60,19 +60,19 @@ Here's instruction to run and test the codechallege code.
 5. phpunit
 
 For heroku setup.
-heruko login
-heruko create
-heroku addons:create heroku-postgresql:hobby-dev   // for free. Just change database.php just incase.
+1. heruko login
+2. heruko create
+3. heroku addons:create heroku-postgresql:hobby-dev   // for free. Just change database.php just incase.
 
-git push heroku master
-heroku ps:scale web=1
+4. git push heroku master
+5. heroku ps:scale web=1
 
-heroku run php artisan migrate
-heroku run php db:seed
+6. heroku run php artisan migrate
+7. heroku run php db:seed
 
-heroku open
+8. heroku open
 
-here's my heroku example: http://mijzcx-codechallenge-php.herokuapp.com/v1/notifications/unread
+9. here's my heroku example: http://mijzcx-codechallenge-php.herokuapp.com/v1/notifications/unread
 
 
 -- no cors, no session_token and authentication yet.
