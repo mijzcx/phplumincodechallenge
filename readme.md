@@ -59,19 +59,17 @@ Here's instruction to run and test the codechallege code.
 4. php artisan db:seed
 5. phpunit
 
-For heroku setup.
+
+# For heroku setup.
+
 1. heruko login
 2. heruko create
 3. heroku addons:create heroku-postgresql:hobby-dev   // for free. Just change database.php just incase.
-
 4. git push heroku master
 5. heroku ps:scale web=1
-
 6. heroku run php artisan migrate
 7. heroku run php db:seed
-
 8. heroku open
-
 9. here's my heroku example: http://mijzcx-codechallenge-php.herokuapp.com/v1/notifications/unread
 
 
