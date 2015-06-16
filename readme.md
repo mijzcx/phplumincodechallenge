@@ -46,8 +46,7 @@ You can view php code:
   * Notification /app/Models
   * generated eloquent mapping /database/migrations
   * seeding NotificationTableSeeder
-  * No
-  tificationTest /tests
+  * NotificationTest /tests
 
 Here's instruction to run and test the codechallege code. 
 
